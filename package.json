@@ -1,0 +1,54 @@
+{
+    "name": "@akrc/next-progress",
+    "version": "0.0.0",
+    "description": "Yet another progress bar for next.js",
+    "main": "./dist/index.js",
+    "scripts": {
+        "build": "rollup -c rollup.config.mjs",
+        "lint": "eslint . --ext .ts,.tsx,.js,.jsx",
+        "lint:fix": "eslint . --ext .ts,.tsx,.js,.jsx --fix"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@rollup/plugin-node-resolve": "^15.0.1",
+        "@types/nprogress": "^0.2.0",
+        "@types/react": "^18.0.29",
+        "eslint": "^8.30.0",
+        "eslint-config-akrc": "^1.0.0",
+        "next": "^13.2.4",
+        "postcss": "^8.4.21",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "rollup": "^3.9.0",
+        "rollup-plugin-peer-deps-external": "^2.2.4",
+        "rollup-plugin-summary": "^2.0.0",
+        "rollup-plugin-ts": "^3.2.0",
+        "typescript": "^5.0.0"
+    },
+    "peerDependencies": {
+        "next": ">=11.0.0",
+        "react": ">=17.0.0",
+        "react-dom": ">=17.0.0"
+    },
+    "pnpm": {
+        "peerDependencyRules": {
+            "allowedVersions": {
+                "typescript": ">=5.0.0"
+            }
+        }
+    },
+    "dependencies": {
+        "nprogress": "^0.2.0",
+        "rollup-plugin-postcss": "^4.0.2"
+    },
+    "exports": {
+        ".": {
+            "import": "./dist/index.js",
+            "types": "./dist/index.d.ts"
+        }
+    },
+    "types": "dist/index.d.ts",
+    "typings": "dist/index.d.ts"
+}
