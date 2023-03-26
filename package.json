@@ -2,15 +2,30 @@
     "name": "@akrc/next-progress",
     "version": "0.0.2",
     "description": "Yet another progress bar for next.js",
+    "keywords": [],
+    "license": "ISC",
+    "author": "",
+    "exports": {
+        ".": {
+            "import": "./dist/index.js",
+            "types": "./dist/index.d.ts"
+        }
+    },
     "main": "./dist/index.js",
+    "types": "dist/index.d.ts",
+    "typings": "dist/index.d.ts",
+    "files": [
+        "dist"
+    ],
     "scripts": {
         "build": "rollup -c rollup.config.mjs",
         "lint": "eslint . --ext .ts,.tsx,.js,.jsx",
         "lint:fix": "eslint . --ext .ts,.tsx,.js,.jsx --fix"
     },
-    "keywords": [],
-    "author": "",
-    "license": "ISC",
+    "dependencies": {
+        "nprogress": "^0.2.0",
+        "rollup-plugin-postcss": "^4.0.2"
+    },
     "devDependencies": {
         "@rollup/plugin-node-resolve": "^15.0.1",
         "@types/nprogress": "^0.2.0",
@@ -38,20 +53,5 @@
                 "typescript": ">=5.0.0"
             }
         }
-    },
-    "dependencies": {
-        "nprogress": "^0.2.0",
-        "rollup-plugin-postcss": "^4.0.2"
-    },
-    "exports": {
-        ".": {
-            "import": "./dist/index.js",
-            "types": "./dist/index.d.ts"
-        }
-    },
-    "types": "dist/index.d.ts",
-    "typings": "dist/index.d.ts",
-    "files": [
-        "dist"
-    ]
+    }
 }
